@@ -1,3 +1,5 @@
+/* HEADER */
+
 .Header {
     background-color: royalblue;
     width: 100vw;
@@ -13,6 +15,8 @@
     width: 40px;
     border-radius: 50%;
 }
+
+/* FOOTER */
 
 .Footer {
     display: -webkit-box;
@@ -30,14 +34,12 @@
     background-color: red
 }
 
+/* MAIN */
+
 .Main {
     height: 30vh;
     width: 100vw;
    background-color:lightgreen; 
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-
 }
 
 .main-pic {
@@ -46,8 +48,26 @@
     border-radius: 50%;
 }
 
+/* SHARE */
+
 .share {
     background-color: salmon;
     width: 100vw;
     height: 10vh;
+}
+
+/* ABOUT */
+
+.About {
+    height: 30vh;
+    width: 100vw;
+    background-color: darkorange;
+}
+
+/* ACTIVITY  */
+
+.Activity {
+    height: 50vh;
+    width: 100vw;
+    background-color: mediumpurple;
 }

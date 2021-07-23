@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
+import React, {Component, useReducer} from 'react'
+import { useParams } from 'react-router-dom'
 
-class Main extends Component {
+class Activity extends Component {
 
     constructor(props) {
         super(props)
@@ -32,14 +33,17 @@ class Main extends Component {
         else{
 
         return (
-            <div className='Main'>
-                <img className='main-pic'src='https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg'/>
-               <p>{user.name}</p>
-               <p>{user.position}</p>
+            <div className='Activity'>
+               <p>Recent Activity</p>
+               <p>{user.recentActivity.map((activity) => (
+                   <p>{activity.date} {activity.details}</p>
+                ))}
+                </p>
+               <button>ALL ACTIVITIES</button>
             </div>
         )
     }
 }
 }
 
-export default Main
+export default Activity

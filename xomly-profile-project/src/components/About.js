@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
+import React, {Component, useReducer} from 'react'
+import { useParams } from 'react-router-dom'
 
-class Main extends Component {
+class About extends Component {
 
     constructor(props) {
         super(props)
@@ -32,14 +33,15 @@ class Main extends Component {
         else{
 
         return (
-            <div className='Main'>
-                <img className='main-pic'src='https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg'/>
-               <p>{user.name}</p>
-               <p>{user.position}</p>
+            <div className='About'>
+                <p>About</p>
+               <p>{user.about}</p>
+               <p>{user.skills}</p>
+               <button onClick>LEARN MORE</button>
             </div>
         )
     }
 }
 }
 
-export default Main
+export default About

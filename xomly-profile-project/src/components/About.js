@@ -1,5 +1,5 @@
 import React, {Component, useReducer} from 'react'
-import { useParams } from 'react-router-dom'
+
 
 class About extends Component {
 

@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import Share from './Share';
+import About from './About'
+import Activity from './Activity';
 
 class Main extends Component {
 
@@ -36,6 +39,10 @@ class Main extends Component {
                 <img className='main-pic'src='https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg'/>
                <p>{user.name}</p>
                <p>{user.position}</p>
+                <Share />
+                <About />
+                <Activity />
+
             </div>
         )
     }

@@ -35,10 +35,12 @@ class Main extends Component {
         else{
 
         return (
-            <div className='Main'>
-                <img className='main-pic'src='https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg'/>
-               <p>{user.name}</p>
-               <p>{user.position}</p>
+            <div className='Main-box'>
+                <div className='Main'>
+                    <img className='main-pic'src='https://i.pinimg.com/236x/07/33/ba/0733ba760b29378474dea0fdbcb97107.jpg'/>
+                    <p className='name'>{user.name}</p>
+                    <p className='position'>{user.position}</p>
+               </div>
                 <Share />
                 <About />
                 <Activity />

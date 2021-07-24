@@ -7,7 +7,8 @@ class Activity extends Component {
         super(props)
         this.state = {
             user: {},
-            isLoaded: false
+            isLoaded: false,
+            activityVisible: false
         }
     }
 
@@ -23,9 +24,15 @@ class Activity extends Component {
     
     }
 
+    handleClick = () => {
+        this.setState({
+            activityVisible: !this.state.activityVisible
+        })
+    }
+
     render() {
 
-        var {isLoaded, user} = this.state
+        var {isLoaded, user, activityVisible} = this.state
 
         var activityIcons = {
             'calendar' : 'https://preview.pixlr.com/images/800wm/100/1/1001503340.jpg',
@@ -50,7 +57,10 @@ class Activity extends Component {
                         </div>
                     ))}
                 </div>
-               <button>ALL ACTIVITIES</button>
+                <div className='activity-but-box'>
+                    <button onClick={this.handleClick} className='activity-button'>ALL ACTIVITIES</button>
+                    <p style={{display:activityVisible ? 'block' : 'none', background:'white', border: '2px solid black', position:'relative', right:'8px'}}>All activities displayed here.</p>
+               </div>
             </div>
         )
     }

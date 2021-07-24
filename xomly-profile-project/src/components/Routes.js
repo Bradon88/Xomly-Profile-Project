@@ -4,8 +4,15 @@ import Main from './Main'
 import Add from './Add'
 import Profile from './Profile'
 import Bell from './Bell'
-// import Share from './components/Share'
-// import Footer from './components/Footer'
+import Facebook from './Facebook'
+import Pinterest from './Pinterest'
+import Twitter from './Twitter'
+import Linkedin from './Linkedin'
+import Clock from './Clock'
+import Briefcase from './Briefcase'
+import Checklist from './Checklist'
+import Grid from './Grid'
+import Arrow from './Arrow'
 
 export default (
     <Switch>
@@ -14,16 +21,16 @@ export default (
         <Route path='/bell' component={Bell} />
         <Route path='/profile' component={Profile} />
 
-        {/* <Route path='/facebook' component={Share} />
-        <Route path='/pinterest' component={Share} />
-        <Route path='/twitter' component={Share} />
-        <Route path='linkedin' component={Share} /> */}
+        <Route path='/facebook' component={Facebook} />
+        <Route path='/pinterest' component={Pinterest} />
+        <Route path='/twitter' component={Twitter} />
+        <Route path='/linkedin' component={Linkedin} />
 
-        {/* <Route path='clock' component={Footer} />
-        <Route path='briefcase' component={Footer} />
-        <Route path='checklist' component={Footer} />
-        <Route path='grid' component={Footer} />
-        <Route path='arrows' component={Footer} /> */}
+        <Route path='/clock' component={Clock} />
+        <Route path='/briefcase' component={Briefcase} />
+        <Route path='/checklist' component={Checklist} />
+        <Route path='/grid' component={Grid} />
+        <Route path='/arrow' component={Arrow} />
     </Switch>
 )
 

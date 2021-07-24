@@ -1,19 +1,27 @@
 /* HEADER */
 
 .Header {
-    background-color: royalblue;
     width: 100vw;
     height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    border-bottom: 1px solid gray;
 }
 
 .small-pic {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+}
+
+.add-bell {
+    color: gray;
+}
+
+.contact-details {
+    font-size: 20px;
 }
 
 /* FOOTER */
@@ -30,16 +38,21 @@
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 10vh;
-    background-color: red
+    height: 9vh;
+    border-top: 1px solid black;
+    background-color: white;
+}
+
+.foot-icon {
+    color: gray;
 }
 
 /* MAIN */
 
-.Main {
+.Main-box {
     height: 30vh;
     width: 100vw;
-   background-color:lightgreen; 
+    
 }
 
 .main-pic {
@@ -48,20 +61,74 @@
     border-radius: 50%;
 }
 
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 17px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.position {
+    position: relative;
+    bottom: 30px;
+}
+
 /* SHARE */
 
 .share {
-    background-color: salmon;
+    
     width: 100vw;
     height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.share-icon {
+    color: gray;
 }
 
 /* ABOUT */
 
-.About {
+.About-box {
     height: 30vh;
     width: 100vw;
-    background-color: darkorange;
+}
+
+.About {
+    font-size: 20px;
+}
+
+.learn-but-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 10px;
+}
+
+.learn-more {
+    width: 95vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    position: relative;
+    bottom: 10px;
 }
 
 /* ACTIVITY  */
@@ -69,5 +136,20 @@
 .Activity {
     height: 50vh;
     width: 100vw;
-    background-color: mediumpurple;
+}
+
+.activity-but-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 8px;
+    top: 5px;
+}
+
+.activity-button {
+    width: 95vw;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
 }

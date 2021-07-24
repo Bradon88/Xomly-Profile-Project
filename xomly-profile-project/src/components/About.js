@@ -7,7 +7,8 @@ class About extends Component {
         super(props)
         this.state = {
             user: {},
-            isLoaded: false
+            isLoaded: false,
+            learnMoreVisible: false
         }
     }
 
@@ -23,9 +24,16 @@ class About extends Component {
     
     }
 
+    handleClick = () => {
+        this.setState({
+            learnMoreVisible: !this.state.learnMoreVisible
+        })
+
+    }
+
     render() {
 
-        var {isLoaded, user} = this.state
+        var {isLoaded, user, learnMoreVisible} = this.state
 
         if(!isLoaded) {
             return <div>Loading...</div>
@@ -33,12 +41,23 @@ class About extends Component {
         else{
 
         return (
-            <div className='About'>
-                <p>About</p>
-               <p>{user.about}</p>
-               <p>{user.skills}</p>
-               <button onClick>LEARN MORE</button>
+        <div className='About-box'>
+            <p className='About'>About</p>
+
+            <p>{user.about}</p>
+
+            <div className='skills'>
+                {user.skills.map((skill) => (
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center', backgroundColor:'lightblue', borderRadius:'5px', color:'blue'}}>
+                        {skill}
+                    </div>
+                ))}
             </div>
+            <div className='learn-but-box'>
+                <button onClick={this.handleClick} className='learn-more'>LEARN MORE</button>
+                <p style={{display:learnMoreVisible ? "block" : "none", background:'white', border: '2px solid black', height:'20px', position:'relative', right:'10px'}}>More information displayed here.</p>
+            </div>
+        </div>
         )
     }
 }

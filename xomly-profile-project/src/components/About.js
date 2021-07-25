@@ -44,18 +44,18 @@ class About extends Component {
         <div className='About-box'>
             <p className='About'>About</p>
 
-            <p>{user.about}</p>
+            <p className='about-user'>{user.about}</p>
 
             <div className='skills'>
                 {user.skills.map((skill) => (
-                    <div style={{display:'flex', justifyContent:'center', alignItems:'center', backgroundColor:'lightblue', borderRadius:'5px', color:'blue'}}>
+                    <div style={{display:'flex', justifyContent:'center', alignItems:'center', backgroundColor:'lightblue', borderRadius:'5px', color:'blue', padding:'1px'}}>
                         {skill}
                     </div>
                 ))}
             </div>
             <div className='learn-but-box'>
                 <button onClick={this.handleClick} className='learn-more'>LEARN MORE</button>
-                <p style={{display:learnMoreVisible ? "block" : "none", background:'white', border: '2px solid black', height:'20px', position:'relative', right:'10px'}}>More information displayed here.</p>
+                <p style={{display:learnMoreVisible ? "block" : "none", background:'white', border: '2px solid black', height:'35px', position:'relative', width:'95vw', fontWeight:'400'}}>More information displayed here.</p>
             </div>
         </div>
         )

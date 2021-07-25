@@ -5,13 +5,13 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 
 const Header = () => {
     return (<div className='Header'>
-        <Link to='/add' className='add-bell'>
+        <Link to='/add' className='add'>
             <AddCircleOutlineIcon/>
         </Link>
 
         <p className='contact-details'>Contact Details</p>
 
-        <Link to='/bell' className='add-bell'>
+        <Link to='/bell' className='bell'>
             <NotificationsIcon/>
         </Link>
 

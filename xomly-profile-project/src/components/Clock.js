@@ -2,8 +2,8 @@ import {Link} from 'react-router-dom'
 
 const Clock = () => {
     return (<div>
-        <p> This is the Clock page</p>
-        <Link to='/'>HOME</Link>
+        <p className='page'> This is the Clock page.</p>
+        <Link to='/' className='home-link'>Home</Link>
     </div>
     )
 }

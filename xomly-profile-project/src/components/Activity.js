@@ -47,11 +47,11 @@ class Activity extends Component {
         else{
 
         return (
-            <div className='Activity'>
-               <p>Recent Activity</p>
+            <div className='Activity-box'>
+               <p className='recent-activity'>Recent Activity</p>
                <div>
                     {user.recentActivity.map((activity) => (
-                        <div>
+                        <div style={{paddingLeft:'5px'}}>
                             <img src={activityIcons[activity.icon]} height="25px" width="25px"/> 
                             {activity.date} <b>{activity.details}</b>
                         </div>
@@ -59,7 +59,7 @@ class Activity extends Component {
                 </div>
                 <div className='activity-but-box'>
                     <button onClick={this.handleClick} className='activity-button'>ALL ACTIVITIES</button>
-                    <p style={{display:activityVisible ? 'block' : 'none', background:'white', border: '2px solid black', position:'relative', right:'8px'}}>All activities displayed here.</p>
+                    <p style={{display:activityVisible ? 'block' : 'none', background:'white', border: '2px solid black', position:'relative', width:'95vw', height:'35px', fontWeight:'400'}}>All activities displayed here.</p>
                </div>
             </div>
         )
